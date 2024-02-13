@@ -11,7 +11,7 @@ def gen_exp_list(driver: webdriver) -> list:
     driver.get("https://whackybeanz.com/calc/everything-exp#pills-exp-table")
     sleep(1)
     EXP_TABLE = driver.find_element(
-        By.ID, "exp-table-4").find_elements(By.CSS_SELECTOR, "td")
+        By.ID, "exp-table-4").find_elements(By.CSS_SELECTOR, "td")[1:]
     for row in EXP_TABLE:
         exp = row.get_attribute("data-raw-exp-tnl")
         if exp is not None:  # Note to reader: Use Pandas instead of doing something like this, I did this on a whim and I was lazy

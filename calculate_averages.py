@@ -43,8 +43,8 @@ def main() -> None:
     average_exp_list = calculate_average_exp(
         bonk_list=level_up_list, exp_dictionary=EXP_DICT)
     for level, (exp, bonks) in gen_final_list(avg_exp_list=average_exp_list, bonk_list=level_up_list):
-        print(f"Level: {level}, Avg EXP Gained: {
-              exp}, Avg Num of Level Ups: {sum(bonks)/NUM_SIMS}")
+        print(f"|{level}|{
+              exp}|{sum(bonks)/NUM_SIMS}|")
 
 
 if __name__ == "__main__":
