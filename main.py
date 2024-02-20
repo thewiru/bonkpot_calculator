@@ -38,7 +38,7 @@ def gen_list(exp_list: list, bonk_list: list) -> list:
 def main() -> None:
     if not exists("values.json"):
         from get_values import grab_data, save_data
-        data = grab_data
+        data = grab_data()
         save_data(data=data)
     level_list = open_data(data="values.json")
     avg_bonks = calculate_avg_bonks(level_list=level_list)
